@@ -28,6 +28,6 @@ public class SalariedEmployeeTest {
 
   @Test
   public void testPayTaxes() {
-    assertEquals("25000.0() emp.payTaxes, 0.001);
+    assertEquals(
   }
 }
