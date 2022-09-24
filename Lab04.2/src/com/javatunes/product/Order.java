@@ -8,25 +8,34 @@
  */
 package com.javatunes.product;
 
-import java.util.Collection;
-
 public class Order {
-  private String id;
-  
+
+  private static String id;
+
   public Order(String id) {
     this.id = id;
   }
-  
+
   /**
    * TODO:
    * get the items from the cart and iterate over them, print each item's product code
    * get cart total and print
+   *
+   * @return
    */
-  public void processCart(Object reference_to_cart) {
-    
+  public static void processCart(ShoppingCart<? extends Product> cart) {
+    for (Product item : cart.allItems()) {
+      System.out.println(item);
+
+
+    }
+    System.out.println(cart.total());
   }
-  
+
+
   public String getId() {
     return id;
   }
+
 }
+

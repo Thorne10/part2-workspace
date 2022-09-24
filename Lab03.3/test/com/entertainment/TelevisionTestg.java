@@ -47,7 +47,7 @@ public class TelevisionTestg {
       @Test
       public void testHashCode () {
       Television tv2 = new Television("HP",  3,DisplayType.LED);
-      assertEquals(tv1.hashCode(),tv2.hashCode());
+      assertNotEquals(tv1.hashCode(),tv2.hashCode());
       Television tv3 = new Television ("HP",3,DisplayType.LCD);
       assertNotEquals(tv1.hashCode(),tv3.hashCode());
       }
