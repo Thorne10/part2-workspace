@@ -18,7 +18,7 @@ public class IRSEnumTest {
   
   @Test
   public void testNormalClientUsage() {
-    IRSEnum irs = IRSEnum.getInstance();
+    IRS irs = IRS.getInstance();
     irs.register(new Corporation("JavaTunes"));
     irs.collectTaxes();
   }
@@ -28,14 +28,18 @@ public class IRSEnumTest {
    */
   @Test
   public void testSingleton() {
+    IRS irs1 = IRS.getInstance();
+    IRS irs2 = IRS.getInstance();
     
   }
   
   @Test
   public void testClassLoading() {
+    //IRSEnum.touch();
     // TODO: call IRSEnum.touch() and note the output - the call to IRSEnum.getInstance() should be commented out for this
     
     // TODO: call IRSEnum.getInstance() and note the output - the call to IRSEnum.touch() should be commented out for this
+    IRS.getInstance();
     
   }
 }
