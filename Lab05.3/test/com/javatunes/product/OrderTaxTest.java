@@ -16,7 +16,7 @@ import com.javatunes.billing.Location;
 public class OrderTaxTest {
   private ShoppingCart<Product> cart1;
   private ShoppingCart<Product> cart2;
-  
+
   @Before
   public void init() {
     cart1 = new ShoppingCart<Product>();  // $20.00
@@ -46,6 +46,12 @@ public class OrderTaxTest {
    */
   @Test
   public void testTaxOnlineOrder() {
+    Order order = new Order ("online -1", Lccation.ONLINE);
+    order1.processCart(cart1);
+    assertEquals(0, order1.getTax(),0.001);
+    Order order2 = new Order("online", Location.ONLINE);
+
+
 
   }
   
