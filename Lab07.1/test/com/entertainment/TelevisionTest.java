@@ -21,6 +21,7 @@ public class TelevisionTest {
    * It should be marked as a failed test if it takes longer than that.
    */
    @Test
+       (timeout = 2_500)
   public void connectToNetwork_completesWithinTimeout() {
     Television tv = new Television();
     tv.connectToNetwork();
